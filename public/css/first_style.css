@@ -1,0 +1,610 @@
+*{
+    padding: 0;
+    margin:0;
+}
+:root{
+    --mc:#e4b63d;
+    --sc:#181d1d;
+    --tc:#e52f3c;
+    --gc:#FFFFFF;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/******* Starting Header*******/
+header{
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--sc);
+    z-index: 1000;
+}
+header .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 50px;
+}
+header .container h1 a{
+    color: var(--mc);
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+}
+header .left-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 800;
+
+}
+header nav ul li a{
+     text-decoration: none;
+     color: var(--gc);
+}
+header nav ul li a:hover{
+    cursor: pointer;
+    color: var(--mc);
+}
+/******* Ending Header*******/
+
+/******** Starting Section 1 *****/
+ .home{
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+#log{
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    background-color: #f44336;
+}
+section.home div{
+    width: 600px;
+    margin: 0px auto;
+    padding-top: 60px;
+    text-align: center;
+}
+section.home h1{
+    font-size: 60px;
+    color: var(--mc);
+}
+section.home p{
+    color: var(--gc);
+    background-color: rgba(0,0,0,.3);
+    padding: 15px 30px;
+    width: 600px;
+    font-size: 20px;
+    margin:30px 0;
+    border-radius: 5px;
+}
+section.home button{
+    width: 150px;
+    height: 50px;
+    background-color: var(--mc);
+    color: var(--sc);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+section.home button:hover{
+    background-color: var(--gc);
+    transition-duration: .8s;
+}
+/******** Ending Section 1 *****/
+
+/******** Starting Section 2 *****/
+section.reading {
+    background-color: #f6f6f6;
+    padding: 100px 0;
+    direction: rtl;
+}
+section.reading .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.reading .container img{
+    border: 20px solid #fff;
+    height: 340px;
+    width: 400px;
+    margin-right: 100px;
+}
+section.reading .container .hh{
+    font-size: 34px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+section.reading .container .hh::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 10%;
+    height: 2px;
+    background-color: var(--tc);
+}
+section.reading .container .hh:hover::before{
+    width: 100%;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+section.reading .container p{
+    padding: 30px 0;
+    color: var(--sc);
+    line-height: 1.4;
+    font-size: 18px;
+}
+section.reading .container h3{
+    font-size: 26px;
+    padding-bottom: 16px;
+}
+section.reading .container .ul-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+section.reading .container ul{
+    list-style: none;
+    padding-left: 20px;
+}
+section.reading .container ul li{
+    color: #797a7d;
+    padding-bottom: 8px;
+}
+section.reading .container ul li i{
+    color: var(--mc);
+    padding-right: 7px;
+    font-size: 10px;
+}
+section.reading .container ul li a{
+     text-decoration: none;
+     color: var(--sc);
+}
+section.reading .container ul li a:hover{
+     cursor: pointer;
+     color: var(--tc);
+}
+/******** Ending Section 2 *****/
+
+/******** Starting Section 3 *****/
+section.search {
+    background-color: var(--sc);
+    padding: 130px 0;
+    height: 260px;
+}
+section.search .container .hh{
+    padding-bottom: 10px;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+    color: var(--mc);
+}
+section.search .container p{
+    color: var(--gc);
+    padding: 10px 200px;
+    line-height: 1.4;
+    font-size: 16px;
+    text-align: center;
+}
+section.search .container .input{
+    padding-bottom: 10px;
+    text-align: center;
+}
+section.search .container .input input{
+    height: 46px;
+    width: 352px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid lightgrey;
+    margin: 8px;
+    color: var(--gc);
+}
+section.search .container .input input::placeholder{
+        font-family: 'Cairo', sans-serif;
+        font-size: 16px;
+}
+section.search button{
+    width: 150px;
+    height: 50px;
+    background-color: var(--mc);
+    color: var(--sc);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+section.search button:hover{
+    background-color: var(--gc);
+    transition-duration: .8s;
+}
+/******** Ending Section 3 *****/
+
+/******** starting Section 4 *****/
+section.receting{
+    background-color: #f6f6f6;
+    padding: 100px 0;
+}
+section.receting .container .hh{
+    font-size: 34px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+section.receting .container .hh::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 5%;
+    height: 2px;
+    background-color: var(--tc);
+}
+section.receting .container .hh:hover::before{
+    width: 100%;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+section.receting .container p{
+    padding: 30px 0;
+    color: var(--sc);
+    line-height: 1.4;
+    font-size: 16px;
+}
+section.receting .container .grid-works{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 60px;
+}
+section.receting .container .grid-works .sec{
+    width: 380px;
+    height: 250px;
+    position: relative;
+}
+section.receting .container .grid-works .sec img{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+section.receting .container .grid-works .sec div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,255,0);
+    color: transparent;
+    transition: background-color .4s;
+}
+section.receting .container .grid-works .sec:hover div{
+    background-color: var(--mc);
+    opacity: .8;
+    color: var(--sc);
+    cursor: pointer;
+}
+section.receting .container .grid-works .sec div h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    transition-timing-function: linear;
+    font-size: 16px;
+    font-weight: 600;
+}
+/******** Ending Section 4 *****/
+
+/******** starting Section 5 *****/
+section.livestream {
+    background-color: var(--sc);
+    padding: 80px 0;
+    height: 580px;
+}
+section.livestream .container .hh{
+    padding-bottom: 10px;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+    color: var(--mc);
+}
+section.livestream .container p{
+    color: var(--gc);
+    padding-bottom: 10px;
+    line-height: 1.4;
+    font-size: 16px;
+    text-align: center;
+}
+/******** Ending Section 5 *****/
+
+/******** Starting Section 6*****/
+section.contact{
+    background-color: #f6f6f6;
+    padding: 50px 0;
+}
+section.contact .container .hh{
+    padding-bottom: 10px;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+    color: var(--sc);
+}
+section.contact .container p{
+    color: var(--sc);
+    padding: 10px 200px;
+    line-height: 1.4;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+section.contact .container .links ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 20px ;
+}
+section.contact .container .links ul li{
+    display: inline-block;
+    margin: 20px;
+    opacity: .8;
+}
+section.contact .container .links ul li a{
+    font-size: 24px;
+    transition: .8s;
+    color: var(--mc);
+}
+section.contact .container .links ul li a:hover{
+    color:var(--sc);
+    cursor: pointer;
+}
+/******** Ending Section 6*****/
+
+/******** starting Section 7 *****/
+section.readmoshaf {
+    background-color: var(--mc);
+    padding: 20px 0;
+    height: 700px;
+}
+section.readmoshaf .container .hh{
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+    color: var(--gc);
+}
+/******** Ending Section 7*****/
+
+/******** Starting Section 8 *****/
+section.reciter {
+    background-color: var(--mc);
+    padding: 100px 0;
+    direction: rtl;
+}
+section.reciter .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.reciter .container img{
+    border: 20px solid #fff;
+    height: 340px;
+    width: 400px;
+    margin-right: 100px;
+}
+section.reciter .container .hh{
+    font-size: 34px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+section.reciter .container .hh::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 10%;
+    height: 2px;
+    background-color: var(--tc);
+}
+section.reciter .container .hh:hover::before{
+    width: 100%;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+section.reciter .container p{
+    padding: 5px 0;
+    color: var(--sc);
+    line-height: 1.4;
+    font-size: 18px;
+}
+section.reciter .container h3{
+    font-size: 26px;
+    padding-bottom: 16px;
+}
+section.reciter .container ul{
+    list-style: none;
+    padding-left: 20px;
+}
+section.reciter .container ul li{
+    color: #797a7d;
+    padding-bottom: 8px;
+}
+section.reciter .container ul li i{
+    color: var(--sc);
+    padding-right: 7px;
+    font-size: 10px;
+}
+section.reciter .container ul li a{
+     text-decoration: none;
+     color: var(--sc);
+}
+section.reciter .container ul li a:hover{
+     cursor: pointer;
+     color: var(--tc);
+}
+/******** Ending Section 8*****/
+/******** starting video *****/
+
+section.video {
+    background-color: var(--mc);
+    padding: 100px 0;
+    direction: rtl;
+}
+section.video .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.video .container video{
+    height: 400px;
+    width: 600px;
+    margin-right: 100px;
+}
+section.video .container .hh{
+    font-size: 34px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+section.video .container .hh::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 10%;
+    height: 2px;
+    background-color: var(--tc);
+}
+section.video .container .hh:hover::before{
+    width: 100%;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+section.video .container p{
+    padding: 30px 0;
+    color: var(--sc);
+    line-height: 1.4;
+    font-size: 18px;
+}
+/******** Ending video *****/
+
+/******** starting footer *****/
+footer{
+    background-color: var(--sc);
+    color: dimgrey;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    direction: rtl;
+}
+/******** Ending footer *****/
+
+/*********Ayat*********/
+.ayat{
+display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 80%;
+    min-height: 40vh;
+    margin: auto;
+    border-radius: 0.5rem;
+    margin-top: 3rem !important;
+    padding: 0.5rem ;
+    position:relative ;
+    transition: 0.3s ease-in-out;
+
+
+
+}
+.ayat :after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color:rgba(182, 131, 42,0.2) ;
+    bottom: 0;
+    left: 0;
+}
+
+
+.leftAyat{
+    width: 100%;
+    min-height: 20vh;
+
+}
+.rightAyat{
+    width: 100%;
+    min-height:20vh;
+    display:flex ;
+    justify-content: flex-end;
+    text-align: left;
+
+}
+#saveward{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: rgba(182, 131, 42,0.8);
+    color: white;
+    border-radius: 1rem;
+
+}
+#tafseer,#surha{
+    color:rgba(182, 131, 42,0.8) ;
+}
+.Englishdiv{
+    display:flex ;
+    justify-content: flex-end;
+    text-align: left;
+}
+.surhaen{
+    display:flex ;
+    justify-content: flex-end;
+    text-align: left;
+    color:rgba(182, 131, 42,0.8) ;
+
+    width: 140px;
+
+}
