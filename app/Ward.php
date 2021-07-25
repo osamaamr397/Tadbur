@@ -13,8 +13,6 @@ class Ward
         if($oldWard){
             $this->items=$oldWard->items;
 
-        }else{
-            $this->items=null;
         }
     }
     public function add($item,$id){

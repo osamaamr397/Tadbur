@@ -25,5 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function wast(){
+        return view('wast39');
+    }
+    public function warsh(){
+        return view('warsh');
+    }
+    public function douri(){
+        return view('douri');
+    }
 
 }

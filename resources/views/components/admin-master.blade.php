@@ -58,7 +58,7 @@ vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                <i class="fas fa-kaaba"></i>
             </div>
             <div class="sidebar-brand-text mx-3">Tadbur Admin </div>
         </a>

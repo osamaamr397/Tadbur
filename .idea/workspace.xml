@@ -152,18 +152,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Tadbur\resources\views" />
+      <recent name="C:\xampp\htdocs\Tadbur\routes\api" />
+      <recent name="C:\xampp\htdocs\Tadbur\routes\web" />
+      <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin\videos" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Tadbur\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\Tadbur\resources\views\components" />
       <recent name="C:\xampp\htdocs\Tadbur\resources\views" />
       <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin\videos" />
       <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Tadbur\routes\api" />
-      <recent name="C:\xampp\htdocs\Tadbur\routes\web" />
-      <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\Tadbur\resources\views\admin\videos" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,6 +250,12 @@
       <workItem from="1626990006458" duration="2870000" />
       <workItem from="1626993333822" duration="10588000" />
       <workItem from="1627047433581" duration="5825000" />
+      <workItem from="1627061793007" duration="3356000" />
+      <workItem from="1627067228861" duration="13608000" />
+      <workItem from="1627125387492" duration="16517000" />
+      <workItem from="1627148791102" duration="1642000" />
+      <workItem from="1627171363930" duration="82000" />
+      <workItem from="1627177201863" duration="2007000" />
     </task>
     <servers />
   </component>
@@ -276,26 +283,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626815736412" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1626991192452">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1627073644840">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1626991192452" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1627073644840" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1621109104497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1621109104497" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1627047434233">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1627177201891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1627047434233" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1627177201891" />
     <state x="0" y="0" width="740" height="824" key="find.popup" timestamp="1626096108514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" width="740" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1626096108514" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1627053332649">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1627140791144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1627053332649" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1627140791144" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626958155261">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

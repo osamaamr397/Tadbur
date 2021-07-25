@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{app()->getLocale()}}">
 <head>
     <meta charset="utf-8">
     <title>تدبر</title>
@@ -8,8 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
 
 
 
@@ -66,21 +73,16 @@
             <div class="ul-grid" id="gird">
                 <ul>
                     <li><i class="fas fa-check"></i><a href="{{route('ayah')}}">المصحف العادي</a></li>
-                    <li><i class="fas fa-check"></i><a href="wasat39.html">المصحف الوسط</a></li>
-                    <li><i class="fas fa-check"></i><a href="jawamee39.html">المصحف الجوامعي</a></li>
-                    <li><i class="fas fa-check"></i><a href="rubuyassen.html">ربع يس</a></li>
+                    <li><i class="fas fa-check"></i><a href="{{route('wastt')}}">المصحف الوسط</a></li>
+
                 </ul>
                 <ul>
-                    <li><i class="fas fa-check"></i><a href="sousi.html">مصحف السوسي</a></li>
-                    <li><i class="fas fa-check"></i><a href="shuba.html">مصحف شعبة</a></li>
-                    <li><i class="fas fa-check"></i><a href="warsh39.html">مصحف ورش</a></li>
-                    <li><i class="fas fa-check"></i><a href="douri.html">مصحف الدوري</a></li>
+
+                    <li><i class="fas fa-check"></i><a href="{{route('warshh')}}">مصحف ورش</a></li>
+                    <li><i class="fas fa-check"></i><a href="{{route('dourii')}}">مصحف الدوري</a></li>
                 </ul>
                 <ul>
-                    <li><i class="fas fa-check"></i><a href="TafseerMuyassar.html">التفسير الميسر</a></li>
-                    <li><i class="fas fa-check"></i><a href="TajweedMuyassar.html">التجويد الميسر</a></li>
-                    <li><i class="fas fa-check"></i><a href="juzuamma.html">الفاتحة وجزء عم</a></li>
-                    <li><i class="fas fa-check"></i><a href="MuyassarGhareeb.html">الميسر في غريب القرآن الكريم</a></li>
+
                 </ul>
             </div>
         </div>
@@ -94,50 +96,38 @@
 <section class="search" id="msearch">
     <div class="container">
         <h2 class="hh">إبحث وتعمق</h2>
-        <p>إبحث عن أي كلمة تريد أن تجدها وتعرف أين موقعها في القرآن مع اختيار تفسيرك المفضل من مجموعة التفسيرات المتاحة والأختيار من بين مجموعة من القراء لتلاوتها </p>
-        <div class="input">
-            <form action="{{route('quran.search')}}">
-                @csrf
 
-            <input type="text" placeholder=" الكلمة المراد البحث عنها" required>
-            <button>ابحث</button>
-            <br>
-            </form>
+            <h3 class="text-center text-danger">بحث عن أي كلمة تريد أن تجدها وتعرف أين موقعها في القرآن مع اختيار تفسيرك المفضل من مجموعة التفسيرات
+                المتاحة والأختيار من بين مجموعة من القراء لتلاوتها</h3>
+            <div class="input">
+                <h4> Type in Arabic or English</h4>
+                <input type="text"name="search"id="search"placeholder="ابخث"class="form-control"onfocus="">
 
-            <button id="save" style="margin-right:370px">Record</button>
-
-        </div>
-        <div class="audio"id="audio"></div>
-
-            <script type="text/javascript">
-                save.onclick=()=> {
-                    var device = navigator.mediaDevices.getUserMedia({audio: true});
-                    var items = [];
-                    device.then(stream => {
-                        var recorder = new MediaRecorder(stream);
-                        recorder.ondataavailable = e => {
-                            items.push(e.data);
-                            if (recorder.state == 'inactive') {
-                                var blob = new Blob(items, {type: 'audio/webm'})
-                                var audio = document.getElementById('audio');
-                                var mainaudio = document.createElement('audio');
-                                mainaudio.setAttribute('controls', 'controls');
-                                audio.appendChild(mainaudio);
-                                mainaudio.innerHTML = '<source src="' + URL.createObjectURL(blob) + '"type="video/webm"/>';
+            </div>
+            <div id="search_list"></div>
 
 
-                            }
-                        }
-                        recorder.start(100);
-                        setTimeout(() => {
-                            recorder.stop();
-                        }, 5000);
-                    })
-                }
-            </script>
+</div>
 
-    </div>
 </section>
+<script>
+    $(document).ready(function () {
+        $('#search').on('keyup',function () {
+
+            var query=$(this).val();
+            $.ajax({
+                url:"search",
+                type:"GET",
+                data:{'search':query},
+                success:function (data) {
+                    $('#search_list').html(data);
+                }
+
+            });
+        });
+
+    });
+    </script>
 
 
 
@@ -240,28 +230,132 @@
 
 {{--
 
-var device= navigator.mediaDevices.getUserMedia({audio:true});
-                var items=[];
-                device.then(stream => {
-                    var recorder = new MediaRecorder(stream);
-                    recorder.ondataavailable = e=>{
-                        items.push(e.data);
-                        if(recorder.state=='inactive'){
-                            var blob = new Blob(items,{type:'audio/webm'})
-                            var audio =document.getElementById('audio');
-                            var mainaudio=document.createElement('audio');
-                            mainaudio.setAttribute('controls','controls');
-                            audio.appendChild(mainaudio);
-                            mainaudio.innerHTML='<source src="'+URL.createObjectURL(blob)+'"type="video/webm"/>';
+<div class="input">
+            <form action="{{route('quran.search')}}">
+                @csrf
+
+            <input type="text" name="search_text" id="search_text" class="form-control" placeholder=" الكلمة المراد البحث عنها" required>
+            <button>ابحث</button>
+            <br>
+            </form>
+
+            <button id="save" style="margin-right:370px">Record</button>
+
+        </div>
+        <div class="audio"id="audio"></div>
+
+            <script type="text/javascript">
+                save.onclick=()=> {
+                    var device = navigator.mediaDevices.getUserMedia({audio: true});
+                    var items = [];
+                    device.then(stream => {
+                        var recorder = new MediaRecorder(stream);
+                        recorder.ondataavailable = e => {
+                            items.push(e.data);
+                            if (recorder.state == 'inactive') {
+                                var blob = new Blob(items, {type: 'audio/webm'})
+                                var audio = document.getElementById('audio');
+                                var mainaudio = document.createElement('audio');
+                                mainaudio.setAttribute('controls', 'controls');
+                                audio.appendChild(mainaudio);
+                                mainaudio.innerHTML = '<source src="' + URL.createObjectURL(blob) + '"type="video/webm"/>';
 
 
+                            }
                         }
-                    }
-                    recorder.start(100);
-                    setTimeout(()=>{
-                        recorder.stop();
-                    },5000);
-                })
-
+                        recorder.start(100);
+                        setTimeout(() => {
+                            recorder.stop();
+                        }, 5000);
+                    })
+                }
+            </script>
 --}}
 
+
+{{--
+ <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h3 class="text-center text-danger">بحث عن أي كلمة تريد أن تجدها وتعرف أين موقعها في القرآن مع اختيار تفسيرك المفضل من مجموعة التفسيرات
+                    المتاحة والأختيار من بين مجموعة من القراء لتلاوتها</h3>
+                <div class="form-group">
+                    <h4> Type in Arabic or English</h4>
+                    <input type="text"name="search"id="search"placeholder="ابخث"class="form-control"onfocus="">
+
+                </div>
+                <div id="search_list"></div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<script>
+    $(document).ready(function () {
+        $('#search').on('keyup',function () {
+
+            var query=$(this).val();
+            $.ajax({
+                url:"search",
+                type:"GET",
+                data:{'search':query},
+                success:function (data) {
+                    $('#search_list').html(data);
+                }
+
+            });
+        });
+
+    });
+</script>
+
+
+--}}
+{{--
+<div class="input">
+            <input type="text" placeholder=" الكلمة المراد البحث عنها" required class="search-input">
+            <button>ابحث</button>
+            <div class="card">
+                <div class="card-header">Search Result</div>
+                <div class="list-group-flush search-result">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".search-input").on('keyup',function () {
+                var _q=$(this).val();
+                if(_q.length>=2){
+                    $.ajax({
+                       url:"{{url('search')}}",
+                        data:{
+                           q:_q
+                        },
+                        beforeSend:function () {
+                           $(".search-result").html('<li class="list-q">loading...</li>');
+
+                        },
+                        success:function (res) {
+                           console.log(res);
+
+                        }
+                    });
+                }
+
+            });
+
+
+        });
+    </script>
+
+--}}
