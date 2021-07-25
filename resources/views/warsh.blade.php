@@ -31,7 +31,7 @@
                     <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
                 <li><a href="#msearch">البحث والتفاسير</a></li>
-                <li><a href="#mreceting">التلاوات</a></li>
+
                 <li><a href="#mcontact">تواصل معنا</a></li>
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
                 <li class="nav-item">

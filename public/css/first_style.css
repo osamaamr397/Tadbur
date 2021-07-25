@@ -205,10 +205,18 @@ section.reading .container ul li a:hover{
 /******** Ending Section 2 *****/
 
 /******** Starting Section 3 *****/
+.containers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
 section.search {
     background-color: var(--sc);
     padding: 130px 0;
     height: 260px;
+    overflow: auto;
 }
 section.search .container .hh{
     padding-bottom: 10px;
@@ -606,5 +614,41 @@ display: flex;
     color:rgba(182, 131, 42,0.8) ;
 
     width: 140px;
+
+}
+.searchContent{
+    background: white ;
+    margin-top: -1rem;
+    padding: 2rem;
+    color: black;
+    width: 60vw;
+    min-height: 10vh;
+    position: absolute;
+    z-index: 1000000;
+    right: 17%;
+    text-decoration: none;
+    list-style: none;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+
+
+}
+.fix{
+
+    color: rgba(0,0,0,0.8) !important;
+    text-decoration: none !important;
+    list-style: none !important;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    cursor: pointer;
+
+
+}
+.texting{
+    color:#E4B63D ;
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
 
 }

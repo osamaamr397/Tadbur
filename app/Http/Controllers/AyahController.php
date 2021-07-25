@@ -21,10 +21,10 @@ class AyahController extends Controller
         return view('ayahs.index',['ayahs'=>$ayahs]);
     }
     public function show($id ){
-$ayahs=Ayah::class;
+        $ayahs=Ayah::class;
 
 
-       $ayahs=DB::table('ayahs')->where('surah_id',$id)->get();
+        $ayahs=DB::table('ayahs')->where('surah_id',$id)->get();
 
         return view('layouts.blog-surah',['ayahs'=>$ayahs]);
     }
@@ -67,32 +67,22 @@ $ayahs=Ayah::class;
                 if(count($data)>0){
 
                     $output='
-
                 <table class="table">
-                <thead>
-                <tr>
-                <th scope="col">Surah Name in Arabic</th>
-                <th scope="col">Surah Name in Arabic</th>
-                <th scope="col">Arabic Text</th>
-                <th scope="col">English transaltion</th>
-                </tr>
-                </thead>
+
                 <tbody>';
 
                     foreach ($data as $row){
+                        $amr='{${https://www.youtube.com/results?search_query=live+search+with+ajax+laravel+in+database+in+jquery+}}';
                         $id=$row->id;
                         $output.='
                     <tr>
-                <th scope="row">'.$row->SurahNameArabic.'</th>
-                 <th scope="row">'.$row->SurahNameEnglish.'</th>
-                <th scope="row"><a href="{{'.route("ayah.showWird",[$row->surah_id,"#".$row->AyahNo]).'}}">'.$row->ArabicText.'</a></th>
-                <th scope="row">'.$row->EnglishTranslation.'</th>
-
+                    <th scope="row">'.$row->SurahNameArabic.'</th>
+                    <th scope="row">'.$row->SurahNameEnglish.'</th>
+                <th class="searchContent" scope="row"><a class="fix" href="<a href="{{'.route("ayah.showWird",[$row->surah_id,"#".$row->AyahNo]).'}}">">'.$row->ArabicText.'</a></th>
+<th scope="row">'.$row->EnglishTranslation.'</th>
                 </tr>
-
-
                     ';
-                }
+                    }
 
                     $output.= '</tbody>
                 </table>';
@@ -119,4 +109,30 @@ $ayahs=Ayah::class;
 /*
  *
  * <a href="{{'.route("ayah.showWird",[$row->surah_id,"#".$row->AyahNo]).'}}">
+ * */
+/*
+ *
+ * $output='
+                <table class="table">
+                <thead>
+                <tr>
+                <th scope="col">Surah Name in Arabic</th>
+                <th scope="col">Surah Name in Arabic</th>
+                <th scope="col">Arabic Text</th>
+                <th scope="col">English transaltion</th>
+                </tr>
+                </thead>
+                <tbody>';
+
+                    foreach ($data as $row){
+                        $id=$row->id;
+                        $output.='
+                    <tr>
+                <th scope="row">'.$row->SurahNameArabic.'</th>
+                 <th scope="row">'.$row->SurahNameEnglish.'</th>
+                <th scope="row"><a href="{{'.route("ayah.showWird",[$row->surah_id,"#".$row->AyahNo]).'}}">'.$row->ArabicText.'</a></th>
+                <th scope="row">'.$row->EnglishTranslation.'</th>
+                </tr>
+                    ';
+ *
  * */
