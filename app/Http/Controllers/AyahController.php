@@ -72,15 +72,18 @@ class AyahController extends Controller
                 <tbody>';
 
                     foreach ($data as $row){
-                        $amr='{${https://www.youtube.com/results?search_query=live+search+with+ajax+laravel+in+database+in+jquery+}}';
                         $id=$row->id;
+                        $routeurl='/ayah/'.$row->surah_id.'/'.'#'.$row->AyahNo;
                         $output.='
                     <tr>
-                    <th scope="row">'.$row->SurahNameArabic.'</th>
-                    <th scope="row">'.$row->SurahNameEnglish.'</th>
-                <th class="searchContent" scope="row"><a class="fix" href="<a href="{{'.route("ayah.showWird",[$row->surah_id,"#".$row->AyahNo]).'}}">">'.$row->ArabicText.'</a></th>
-<th scope="row">'.$row->EnglishTranslation.'</th>
+                <th scope="row">'.$row->SurahNameArabic.'</th>
+                 <th scope="row">'.$row->SurahNameEnglish.'</th>
+                <th class="searchContent" scope="row"><a class="fix" href="'.$routeurl.'">'.$row->ArabicText.'</a></th>
+                <th scope="row">'.$row->EnglishTranslation.'</th>
+
                 </tr>
+
+
                     ';
                     }
 
@@ -135,4 +138,7 @@ class AyahController extends Controller
                 </tr>
                     ';
  *
+ * */
+/*
+ * <th class="searchContent" scope="row"><a class="fix
  * */

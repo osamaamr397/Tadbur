@@ -17,6 +17,10 @@ class VideoController extends Controller
         $videos = auth()->user()->videos()->paginate(5);
         return view('admin.videos.index', ['videos' => $videos]);
     }
+    public function index2(){
+        $videos=Video::all();
+        return view('videos',['videos'=>$videos]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -50,8 +54,11 @@ class VideoController extends Controller
            $video=$request->file('Video');
            $video_name=$video->getClientOriginalName();
            $path=$request->file('Video')->storeAs($destination_path,$video_name);
+           // $video_name= $request->file('Video')->store('doc');
            $inputs['Video']=$video_name;
         }
+
+
 
         auth()->user()->videos()->create($inputs);
         Session()->flash('video-created-message', 'video is created');
@@ -60,6 +67,7 @@ class VideoController extends Controller
 
 
     }
+
 
 /*
     public function store(Request $request)
@@ -78,7 +86,7 @@ class VideoController extends Controller
             $file = $request->file('Video');
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename = time() . '.' . $extension;
-            $file->move('videos/', $filename);
+            $file->move('videos', $filename);
 
             $pages['Video'] = $filename;
         } else {

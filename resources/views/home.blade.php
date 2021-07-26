@@ -39,8 +39,9 @@
                 <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
                 <li><a href="#msearch">البحث والتفاسير</a></li>
+                <li><a href="{{route('detectionre')}}">التعرف على القارئ</a></li>
+                <li><a href="{{route('videoTafsser')}}">االتفسير والتعليم المصور</a></li>
 
-                <li><a href="#mcontact">تواصل معنا</a></li>
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
                 <li class="nav-item">
                     <form action="/logout"method="post">
@@ -102,7 +103,7 @@
             المتاحة والأختيار من بين مجموعة من القراء لتلاوتها</h3>
         <div class="input">
 
-            <input type="text"name="search"id="search"placeholder="ابخث"class="form-control"onfocus="">
+            <input type="text"name="search"id="search"placeholder="ابحث"class="form-control"onfocus="">
 
         </div>
         <div id="search_list"></div>

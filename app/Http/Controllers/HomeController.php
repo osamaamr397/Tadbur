@@ -34,5 +34,9 @@ class HomeController extends Controller
     public function douri(){
         return view('douri');
     }
+    public function detectreciter(){
+
+        return view('detections');
+    }
 
 }
