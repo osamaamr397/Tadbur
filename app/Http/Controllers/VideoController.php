@@ -21,6 +21,11 @@ class VideoController extends Controller
         $videos=Video::all();
         return view('videos',['videos'=>$videos]);
     }
+    public function index3(){
+        $videos=Video::all();
+        return view('videoschild',['videos'=>$videos]);
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -71,38 +76,7 @@ class VideoController extends Controller
     }
 
 
-/*
-    public function store(Request $request)
-    {
-        $this->authorize('create',Video::class);
-        $pages = request()->validate([
-            'title' => 'required|min:5|max:255',
-            'Video' => 'required|file',
-            'status' => 'required'
-        ]);
 
-//            $pages->title = $request->input('title');
-//            $pages->status = $request->input('status');
-
-        if ($request->hasfile('Video')) {
-            $file = $request->file('Video');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename = time() . '.' . $extension;
-            $file->move('videos', $filename);
-
-            $pages['Video'] = $filename;
-        } else {
-            return $request;
-            $pages->Video = '';
-        }
-
-
-        auth()->user()->videos()->create($pages);
-        Session()->flash('video-created-message', 'video is created');
-
-        return redirect()->route('video.index');
-    }
-*/
     /**
      * Display the specified resource.
      *

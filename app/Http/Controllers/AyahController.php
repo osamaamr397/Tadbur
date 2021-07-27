@@ -61,36 +61,36 @@ class AyahController extends Controller
                 $data=Ayah::where('SurahNameArabic','like','%'.$request->search.'%')
                     ->orwhere('SurahNameEnglish','like','%'.$request->search.'%')
                     ->orwhere('ArabicText','like','%'.$request->search.'%')
-                    ->orwhere('EnglishTranslation','like','%'.$request->search.'%')->paginate(4);
+                    ->orwhere('EnglishTranslation','like','%'.$request->search.'%')->paginate(100);
                 $output='';
                 if(count($data)>0){
 
                     $output='
                 <table class="table">
 
-                <tbody>';
+                <tbody><tr class="searchContent">';
 
                     foreach ($data as $row){
                         $id=$row->id;
                         $routeurl='/ayah/'.$row->surah_id.'/'.'#'.$row->AyahNo;
-                        $output.='
-                    <tr>
-                <th scope="row" >'.$row->SurahNameArabic.'</th>
-                 <th scope="row" >'.$row->SurahNameEnglish.'</th>
-                <th class="searchContent" scope="row"><a class="fix" href="'.$routeurl.'">'.$row->ArabicText.'</a></th>
-                <th scope="row" >'.$row->EnglishTranslation.'</th>
 
-                </tr>
+                        $output.='
+
+
+                <th class="thsearch"><a class="fix" href="'.$routeurl.'">'.$row->ArabicText.'</a></th>
+                <th class="thsearch ss"><a class="fix" href="'.$routeurl.'">'.$row->EnglishTranslation.'</a></th>
+
+
 
 
                     ';
                     }
 
-                    $output.= '</tbody>
+                    $output.= '</tr></tbody>
                 </table>';
 
                 }else{
-                    $output.='No results';
+                    $output.='<p class="presult">No results</p>';
 
                 }
                 return $output;

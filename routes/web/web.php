@@ -24,6 +24,8 @@ Route::get('/warch', 'HomeController@warsh')->name('warshh');
 Route::get('/douri', 'HomeController@douri')->name('dourii');
 Route::get('/detectpage','HomeController@detectreciter')->name('detectionre');
 Route::get('/videotafseer','VideoController@index2')->name('videoTafsser');
+Route::get('/childrenlearning','VideoController@index3')->name('videochild');
+
 Route::get('/ayah','AyahController@index')->name('ayah');
 Route::get('/ayah/{ayah}','AyahController@show')->name('ayah.show');
 

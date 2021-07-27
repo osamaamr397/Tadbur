@@ -33,7 +33,7 @@
                 @if(auth()->user()->userHasRole('Admin'))
                     <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
-                <li><a href="{{route('videochild')}}">تعليم الاطفال</a></li>
+                <li><a href="{{route('videoTafsser')}}">االتفسير المصورر</a></li>
                 <li><a href="{{route('detectionre')}}">التعرف على القارئ</a></li>
 
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
@@ -49,12 +49,12 @@
     </div>
 </header>
 <section class="videos_class">
-@foreach($videos as $video)
-    @if($video->status=='pictorial tafseer')
+    @foreach($videos as $video)
+        @if($video->status=='children learning')
             <div class="videos_container">
 
-            <p>{{$video->title}}</p>
-                        <img width="500px" src="{{asset('uploads/public/videos/products/'.$video->Video)}}" alt="">
+                <p>{{$video->title}}</p>
+                <img width="500px" src="{{asset('uploads/public/videos/products/'.$video->Video)}}" alt="">
 
             </div>
         @endif

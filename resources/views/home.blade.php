@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,15 +24,17 @@
         <div class="left-grid">
             <h1><a href="#mhome">تدبـــــــــــر</a></h1>
         </div>
+
         <nav>
             <ul>
                 <li><a href="#mreading">القراءة</a></li>
                @if(auth()->user()->userHasRole('Admin'))
                 <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
-                <li><a href="#msearch">البحث والتفاسير</a></li>
+
                 <li><a href="{{route('detectionre')}}">التعرف على القارئ</a></li>
-                <li><a href="{{route('videoTafsser')}}">االتفسير والتعليم المصور</a></li>
+                <li><a href="{{route('videoTafsser')}}">االتفسير المصورر</a></li>
+                <li><a href="{{route('videochild')}}">تعليم الاطفال</a></li>
 
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
                 <li class="nav-item">
@@ -44,6 +45,7 @@
                 </li>
 
             </ul>
+
         </nav>
     </div>
 </header>
@@ -129,10 +131,17 @@
         <h2 class="hh">البث المباشـــــر</h2>
         <p>تابع البث المباشـــر من الحرم المكي </p>
         <center>
-            <iframe width="853" height="480" src="https://www.youtube.com/embed/aZm_mLxlOcE?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="400" height="380" src="https://www.youtube.com/embed/aZm_mLxlOcE?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
     </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!--   Contact us   -->
 <section class="contact" id="mcontact">
