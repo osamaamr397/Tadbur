@@ -38,7 +38,6 @@
         </div>
     </div>
 </header>
-@if(Session::has('ward'))
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold "style="color: #E4B63D">Wirds</h6>
@@ -74,10 +73,10 @@
 
                     @foreach($ayahs as $ayah)
                         <tr>
-                            <td>{{$ayah['item']->SurahNameEnglish}}</td>
-                            <td>{{$ayah['item']->SurahNameArabic}}</td>
-                            <td>{{$ayah['item']->EnglishTranslation}}</td>
-                            <td scope="row"><a href="{{route('ayah.showWird',[$ayah['item']->surah_id,"#".$ayah['item']->AyahNo])}}">{{$ayah['item']->OrignalArabicText}}</a></td>
+                            <td>{{$ayah->SurahNameEnglish}}</td>
+                            <td>{{$ayah->SurahNameArabic}}</td>
+                            <td>{{$ayah->EnglishTranslation}}</td>
+                            <td scope="row"><a href="{{route('ayah.showWird',[$ayah->Surah_id,"#".$ayah->Ayah_Num])}}">{{$ayah->OrignalArabicText}}</a></td>
 
 
 
@@ -91,7 +90,7 @@
         </div>
     </div>
 
-    @endif
+
 {{--
 <strong>{{$ayah['item']->id}}</strong>
  {{$amr=$ayah['item']->surah_id}}

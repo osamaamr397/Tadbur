@@ -41,6 +41,10 @@ class User extends Authenticatable
         return $this->hasMany(Video::class);
 
     }
+    public function wirds(){
+        return $this->hasMany(Wird::class);
+
+    }
 
     public function permissions(){
         return $this->belongsToMany(Permission::class);

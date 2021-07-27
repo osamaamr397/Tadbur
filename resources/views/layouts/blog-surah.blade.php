@@ -35,7 +35,7 @@ use App\Surah;
 
  @foreach($ayahs as $ayah)
      <div class="ayat" id="{{$ayah->AyahNo}}">
-         <form action="{{route('ayah.addToWard',$ayah->id)}}">
+         <form action="{{route('ayah.addToWard',[$ayah->AyahNo,$ayah->surah_id])}}">
          <button  id="saveward">Save Ward</button>
          </form>
          <div class="leftAyat">
