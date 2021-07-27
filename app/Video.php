@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Video extends Model
 {
-    public $directory = "/videos/";
+   // public $directory = "/videos/";
     protected $guarded = [];
 
     public function user()
@@ -27,14 +27,14 @@ class Video extends Model
 
 
     //the accessor is getting some data
-    public function getVideoAttribute($value)
-    {
-        if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
-            //return $value;
-
-            return $this->directory . $value;
-
-
-        }
-    }
+//    public function getVideoAttribute($value)
+//    {
+//        if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
+//            //return $value;
+//
+//            return $this->directory . $value;
+//
+//
+//        }
+//    }
 }

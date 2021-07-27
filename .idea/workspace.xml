@@ -270,6 +270,8 @@
       <workItem from="1627293268135" duration="816000" />
       <workItem from="1627346407443" duration="430000" />
       <workItem from="1627384402380" duration="19828000" />
+      <workItem from="1627414475135" duration="3154000" />
+      <workItem from="1627417660747" duration="3204000" />
     </task>
     <servers />
   </component>
@@ -309,10 +311,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1621109104497" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1627384405138">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1627417662058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1627384405138" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1627417662058" />
     <state x="0" y="0" width="740" height="824" key="find.popup" timestamp="1626096108514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

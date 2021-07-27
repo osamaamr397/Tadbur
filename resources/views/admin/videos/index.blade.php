@@ -47,11 +47,12 @@
 
                         @foreach($videos as $video)
 
+
                             <tr>
                                 <td>{{$video->id}}</td>
                                 <td>{{$video->user->name}}</td>
                                 <td><a href="{{route('video.edit', $video->id)}}">{{$video->title}}</a></td>
-                                <td><img width="500px" src="{{asset('storage/videos/products/').$video->Video}}" alt=""> </td>
+                                <td><img width="500px" src="{{asset('uploads/public/videos/products/'.$video->Video)}}" alt=""> </td>
                                 <td>{{$video->status}}</td>
                                 <td>{{$video->created_at->diffForHumans()}}</td>
                                 <td>{{$video->updated_at->diffForHumans()}}</td>

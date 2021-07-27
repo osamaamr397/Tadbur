@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use App\Video;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Session;
@@ -52,8 +52,10 @@ class VideoController extends Controller
         if ($request->hasFile('Video')) {
            $destination_path='public/videos/products';
            $video=$request->file('Video');
+
            $video_name=$video->getClientOriginalName();
-           $path=$request->file('Video')->storeAs($destination_path,$video_name);
+           $path=$request->file('Video')->storeAs($destination_path,$video_name, 'public_uploads');
+           //dd($path);
            // $video_name= $request->file('Video')->store('doc');
            $inputs['Video']=$video_name;
         }

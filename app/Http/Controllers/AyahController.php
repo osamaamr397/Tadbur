@@ -75,10 +75,10 @@ class AyahController extends Controller
                         $routeurl='/ayah/'.$row->surah_id.'/'.'#'.$row->AyahNo;
                         $output.='
                     <tr>
-                <th scope="row">'.$row->SurahNameArabic.'</th>
-                 <th scope="row">'.$row->SurahNameEnglish.'</th>
+                <th scope="row" >'.$row->SurahNameArabic.'</th>
+                 <th scope="row" >'.$row->SurahNameEnglish.'</th>
                 <th class="searchContent" scope="row"><a class="fix" href="'.$routeurl.'">'.$row->ArabicText.'</a></th>
-                <th scope="row">'.$row->EnglishTranslation.'</th>
+                <th scope="row" >'.$row->EnglishTranslation.'</th>
 
                 </tr>
 

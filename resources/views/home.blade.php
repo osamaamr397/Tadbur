@@ -17,13 +17,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-
-
-
-
-
-
-
 </head>
 <body>
 <!--  The Header Of the site   -->
@@ -131,6 +124,15 @@
 <!--  Receting -->
 
 <!--  LiveStream  -->
+<section class="livestream" id="mlivestream">
+    <div class="container">
+        <h2 class="hh">البث المباشـــــر</h2>
+        <p>تابع البث المباشـــر من الحرم المكي </p>
+        <center>
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/aZm_mLxlOcE?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
+    </div>
+</section>
 
 <!--   Contact us   -->
 <section class="contact" id="mcontact">

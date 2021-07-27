@@ -29,7 +29,7 @@
 <header id="header" >
     <div class="container">
         <div class="left-grid">
-            <h1><a href="#mhome">تدبـــــــــــر</a></h1>
+            <h1><a href="{{route('home')}}">تدبـــــــــــر</a></h1>
         </div>
         <nav>
             <ul>
@@ -55,6 +55,6 @@
 </header>
 
 
-<iframe width="560" height="315" src=" http://192.168.1.6:8501" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src=" https://192.168.1.6:8501" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
