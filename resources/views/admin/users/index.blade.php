@@ -4,8 +4,13 @@
 
         <h1>Users</h1>
 
+
+
+
         @if(session('user-deleted'))
                     <div class="alert alert-danger">{{session('user-deleted')}}</div>
+        @elseif(session('user-updated'))
+            <div class="alert alert-success">{{session('user-updated')}}</div>
             @endif
 
         <div class="card shadow mb-4">

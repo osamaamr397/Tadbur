@@ -62,8 +62,7 @@
                                         <td>{{$role->id}}</td>
                                         <td><a href="{{route('roles.edit',$role->id)}}">{{$role->name}}</a></td>
                                         <td>{{$role->slug}}</td>
-                                        <td>{{$role->created_at->diffForHumans()}}</td>
-                                        <td>{{$role->updated_at->diffForHumans()}}</td>
+
                                         <td>
                                             <form method="post" action="{{route('roles.destroy',$role->id)}}">
                                                 @csrf

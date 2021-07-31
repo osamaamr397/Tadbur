@@ -14,13 +14,7 @@
                     @csrf
                     @method('PUT')
 
-                    <div class="mb-4">
-                        <img class="img-profile rounded-circle" src="{{$user->avatar}}">
-                    </div>
 
-                    <div class="form-group">
-                        <input type="file" name="avatar">
-                    </div>
 
 
                     <div class="form-group">

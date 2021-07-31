@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tadbur Admin</title>
+    <title>تدبر</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -298,7 +298,7 @@ vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
+                    <span>    جميع الحقوق محفوظة © 2021</span>
                 </div>
             </div>
         </footer>

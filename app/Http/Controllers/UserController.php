@@ -33,17 +33,16 @@ class UserController extends Controller
             'username'=> ['required', 'string', 'max:255','alpha_dash'],
             'name'=> ['required', 'string', 'max:255'],
             'email'=> ['required', 'email', 'max:255'],
-            'avatar'=> ['file']
+
 
         ]);
 
-        if(request('avatar')){
-            $inputs['avatar'] = request('avatar')->store('images');
-        }
+
 
         $user->update($inputs);
+        session()->flash('user-updated','User has been updated');
 
-        return back();
+        return redirect()->route('users.index');
     }
     public function destroy(User $user){
         $user->delete();

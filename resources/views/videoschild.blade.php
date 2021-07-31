@@ -33,8 +33,8 @@
                 @if(auth()->user()->userHasRole('Admin'))
                     <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
-                <li><a href="{{route('videoTafsser')}}">االتفسير المصورر</a></li>
-                <li><a href="{{route('detectionre')}}">التعرف على القارئ</a></li>
+                <li><a href="{{route('videoTafsser')}}">التفسير المصور</a></li>
+                <li><a href="http://192.168.1.6:8501">التعرف على القارئ</a></li>
 
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
                 <li class="nav-item">
@@ -54,7 +54,13 @@
             <div class="videos_container">
 
                 <p>{{$video->title}}</p>
-                <img width="500px" src="{{asset('uploads/public/videos/products/'.$video->Video)}}" alt="">
+              {{--  <img width="500px" src="{{asset('uploads/public/videos/products/'.$video->Video)}}" alt=""> --}}
+                <video width="850" height="240" controls>
+                    <source src="{{asset('uploads/public/videos/products/'.$video->Video)}}" type="video/mp4">
+                    <source src="{{asset('uploads/public/videos/products/'.$video->Video)}}" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+
 
             </div>
         @endif

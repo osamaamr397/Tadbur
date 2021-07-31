@@ -50,7 +50,7 @@ class VideoController extends Controller
         $this->authorize('create',Video::class);
         $inputs = request()->validate([
             'title' => 'required|min:5|max:255',
-            'Video' => 'required|file',
+            'Video' => 'required|mimes:mp4,ppx, ppt, pptx,pdf,ogv,jpg,webm|max:100000000',
             'status' => 'required'
         ]);
         $inputs=request()->all();
@@ -64,7 +64,6 @@ class VideoController extends Controller
            // $video_name= $request->file('Video')->store('doc');
            $inputs['Video']=$video_name;
         }
-
 
 
         auth()->user()->videos()->create($inputs);
@@ -126,13 +125,13 @@ class VideoController extends Controller
 
 
         $this->authorize('update', $video);
-        /*or
-        $post->update();
-        */
+
+        $video->update();
 
 
 
-        $video->save();
+
+        //$video->save();
 
         session()->flash('video-updated-message', 'video with title was updated ' . $inputs['title']);
 

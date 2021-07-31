@@ -29,14 +29,10 @@
 
 
             <div class="form-group">
-                         <textarea
-                                 name="status"
-                                 class="form-control"
-                                 id="body"
-                                 cols="30"
-                                 rows="10"
-                                 value="{{$video->status}}" >
-                </textarea>
+                <input type="radio" name="status" value="pictorial tafseer">
+                <label>pictorial tafseer</label>
+                <input type="radio" name="status" value="children learning"> <label>children learning</label>
+
             </div>
 
 

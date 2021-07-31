@@ -22,7 +22,7 @@
 <header id="header" >
     <div class="container">
         <div class="left-grid">
-            <h1><a href="#mhome">تدبـــــــــــر</a></h1>
+            <h1><a href="{{route('home')}}">تدبـــــــــــر</a></h1>
         </div>
 
         <nav>
@@ -32,8 +32,8 @@
                 <li><a href={{route('admin.index')}}>Admin</a></li>
                 @endif
 
-                <li><a href="{{route('detectionre')}}">التعرف على القارئ</a></li>
-                <li><a href="{{route('videoTafsser')}}">االتفسير المصورر</a></li>
+                <li><a href="http://192.168.1.6:8501">التعرف على القارئ</a></li>
+                <li><a href="{{route('videoTafsser')}}">التفسير المصور</a></li>
                 <li><a href="{{route('videochild')}}">تعليم الاطفال</a></li>
 
                 <li> <a href="{{route('ayah.wirdCart')}}">ورد</a></li>
@@ -56,7 +56,7 @@
         <img class="essa" >
 
         <h1>تــدبـــر</h1>
-        <p>موقع يساعدك على قراءة القرآن الكريم وفهم معانيه والبحث عن ما تريد من الكلمات والتفاسير المختلفة و الأستماع لمجموعة من القراء المتاحين بالإضافة إلى خدمة البث المباشر </p>
+        <p>موقع يساعدك على قراءة القرآن الكريم وفهم معانيه والبحث عن ما تريد من الكلمات والتفاسير بالإضافة إلى خدمة البث المباشر </p>
         <button>اعرف أكثر</button>
     </div>
 </section>
@@ -131,7 +131,7 @@
         <h2 class="hh">البث المباشـــــر</h2>
         <p>تابع البث المباشـــر من الحرم المكي </p>
         <center>
-            <iframe width="400" height="380" src="https://www.youtube.com/embed/aZm_mLxlOcE?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="400" height="380" src="https://www.youtube.com/embed/fpvFri1mDQ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
     </div>
 </section>
